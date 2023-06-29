@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js"></script>
+    <title>World Countries</title>
+  </head>
+  <body>
+    <header>
+      <h1>World Countries Data</h1>
+      <p class="countriesNumber"></p>
+      <p class="filteredCountriesNum"></p>
+    </header>
+
+    <main>
+      <input
+        type="text"
+        class="search"
+        placeholder="Search countries by name, city and languages"
+      />
+
+      <div class="buttons-container">
+        <button class="sort-names">Name</button>
+        <button class="sort-capital">Capital</button>
+        <button class="sort-population">Population</button>
+
+        <a href="#chart-container" class="a-tag"
+          ><i class="fa-solid fa-chart-column chart-icon"></i
+        ></a>
+      </div>
+    </main>
+
+    <div class="wrapper"></div>
+
+    <section class="chart-container">
+      <div class="chart-btn-container">
+        <button class="chart-btn">Population</button>
+        <button class="chart-btn">Languages</button>
+      </div>
+      <h3 class="chart-title">10 Most populated countries in the world</h3>
+      <canvas id="myChart" width="50" height="20"></canvas>
+    </section>
+
+    <script src="countries_data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
